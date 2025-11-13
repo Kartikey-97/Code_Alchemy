@@ -72,6 +72,9 @@ Deployment on edge devices (Jetson, Coral)
 Integration with real-time monitoring systems
 Additional safety objects and scene understanding
 On-device or continual learning support
-Team
-Your Name
+AlgoX
+Kartikey Gupta
+Keshav Raj
+Pranav Mathur
+Bhagya Varshney
 (Add teammates if applicable)
