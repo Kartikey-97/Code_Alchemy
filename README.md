@@ -6,7 +6,6 @@ The system identifies seven critical safety objects with real-time performance, 
 
 
 Detected Classes
-
 Oxygen Tank
 Nitrogen Tank
 First Aid Box
@@ -18,7 +17,6 @@ Fire Extinguisher
 
 
 Project Structure
-
 dataset/
     train/
     val/
@@ -33,7 +31,6 @@ train.ipynb
 
 
 How the System Works
-
 A synthetic dataset is provided, containing multiple lighting, clutter, and environmental variations.
 YOLOv8n is trained for 15 epochs using the train and validation split.
 The model is evaluated on a separate test set to check generalization.
@@ -42,7 +39,6 @@ A curated set of ten prediction images is included: one high-confidence detectio
 
 
 Model Performance
-
 The final model achieved the following results on the validation set:
 Metric	Value
 mAP50	0.70
@@ -61,7 +57,6 @@ Fire Extinguisher: 0.661
 
 
 Training Command
-
 yolo task=detect mode=train \
   model=yolov8n.pt \
   data=data.yaml \
@@ -72,7 +67,6 @@ yolo task=detect mode=train \
 
   
 Prediction Command
-
 yolo task=detect mode=predict \
   model=best.pt \
   source=test3/images \
@@ -81,7 +75,6 @@ yolo task=detect mode=predict \
 
   
 Best 10 Prediction Samples
-
 The folder best10/ contains ten representative outputs:
 Seven images with the highest-confidence detection for each individual class
 Three additional images with the strongest overall detections
@@ -90,7 +83,6 @@ These samples are intended for reporting and presentation use.
 
 
 Technology Stack
-
 Python
 Google Colab
 PyTorch
@@ -100,7 +92,6 @@ Synthetic image dataset (provided by organizers)
 
 
 Future Improvements
-
 Fine-tuning using a small real-world dataset
 Deployment on edge devices (Jetson, Coral)
 Integration with real-time monitoring systems
